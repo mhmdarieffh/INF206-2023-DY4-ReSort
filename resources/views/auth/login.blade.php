@@ -48,7 +48,7 @@
 
 
         <div class="grid justify-items-center mt-3">
-            <x-primary-button class="bg-green-500 px-4 py-2 text-white hover:bg-green-600 sm:px-8 sm:py-3 text-teal-800">
+            <x-primary-button class="bg-green-500 px-4 py-2 hover:bg-green-600 sm:px-8 sm:py-3 text-teal-800">
                 {{ __('Login') }}
             </x-primary-button>
         </div>
