@@ -1,55 +1,42 @@
-@extends('layouts.navigation')
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>pengajuan</title>
-  </head>
-  <body>
-  <div class="bg-[#ADDE86] p-8">
+<x-app-layout>
+<div class="bg-[#ADDE86] p-8">
     <div class="bg-[#D9D9D9] rounded-[20px]"> 
       <div class="bg-[#E6E6E6]  rounded-[20px]">
         <div class="mx-auto px-4">
-          <div class="flex justify-between h-16 " >
-            <!-- Logo -->
-            <div class="flex items-center justify-center">
-              <img class="h-8 w-auto" src="{{url('/image/logo.png')}}" alt="Logo" />
+          <div class="p-[30px]">
+            <div class="flex bg-[#E6E6E6] rounded-[20px] h-screen">
+            <div class="px-10 py-10">
+            <div>
+              <h4 class="font-semibold" style="font-size:50px;">KONTAK</h4>
             </div>
-                                                                                         
-            <!-- Menu -->
-            <div class="flex justify-between items-center text-[20px] p-[20px]">
-              <!-- Beranda -->
-              <a
-                href="#"
-                class="px-3 py-2 text-gray-800 hover:text-white font-semibold"
-                >Beranda</a
-              >
-
-              <!-- Kontak -->
-              <a
-                href="#"
-                class="px-3 py-2 text-gray-800 hover:text-white font-semibold"
-                >Kontak</a
-              >
-
-              <!-- Logout -->
-              <a
-                href="#"
-                class="px-3 py-2 text-gray-800 hover:text-white font-semibold"
-                >Logout</a
-              >
+            <div>
+              <h6 class="font-semibold" style="font-size: 45PX;">HUBUNGI BANK SAMPAH MELALUI :</h6>
+            </div>
+            <div class="px-10 py-8">
+              <table border="0" class="font-semibold" style="font-size: 30px;">
+                <tr>
+                  <td class="px-2"><img class="h-5 w-5" src="mail.png"/></td>
+                  <td>Email</td>
+                  <td class="px-3">:</td>
+                  <td>banksampah@gmail.com</td>
+                </tr>
+                <tr>
+                  <td class="px-2"><img class="h-5 w-5" src="arroba.png"/></td>
+                  <td>Media Sosial</td>
+                  <td class="px-3">:</td>
+                  <td>@banksampah</td>
+                </tr>
+                <tr>
+                  <td class="px-2"><img class="h-5 w-5" src="call.png"/></td>
+                  <td>Telepon</td>
+                  <td class="px-3">:</td>
+                  <td>(0651) 123 123</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="p-[30px]">
-        <div
-          class="flex items-center justify-center bg-[#E6E6E6] rounded-[20px] h-screen"
-        >
-  </div>
-  </body>
-</html>
+</x-app-layout>
