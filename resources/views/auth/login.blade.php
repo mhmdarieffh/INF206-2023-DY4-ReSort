@@ -40,7 +40,7 @@
                 <span class="ml-2 text-sm text-blue-950">{{ __('Ingat Saya') }}</span>
             </label>
             @if (Route::has('password.request'))
-                <a class="italic underline text-sm text-right text-gray-600" href="{{ route('password.request') }}">
+                <a class="italic underline text-sm text-right text-gray-600 hover:text-gray-900 " href="{{ route('password.request') }}">
                     {{ __('Lupa Password?') }}
                 </a>
             @endif
@@ -48,7 +48,7 @@
 
 
         <div class="grid justify-items-center mt-3">
-            <x-primary-button class="bg-green-500 px-4 py-2 hover:bg-green-600 sm:px-8 sm:py-3 text-teal-800">
+            <x-primary-button class="bg-green-500 px-4 py-2 hover:bg-green-600 text-blue-900 sm:px-8 sm:py-3">
                 {{ __('Login') }}
             </x-primary-button>
         </div>
