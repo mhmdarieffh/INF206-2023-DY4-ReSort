@@ -35,20 +35,18 @@ Route::get('/kontak', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/aju', function () {
+Route::get('/pengajuan', function () {
     return view('pengajuan');
-})->name('pengajuan');
+})->middleware(['auth', 'verified'])->name('pengajuan');
 
-Route::get('/ambil', function () {
+Route::get('/pengambilan', function () {
     return view('pengambilan');
-})->name('pengambilan');
+})->middleware(['auth', 'verified'])->name('pengambilan');
 
+Route::get('/kontak', function () {
+    return view('kontak');
+})->middleware(['auth', 'verified'])->name('kontak');
 
-
-
-
-
-
-
-
-
+Route::get('/beranda', function () {
+    return view('beranda');
+})->middleware(['auth', 'verified'])->name('beranda');
