@@ -34,3 +34,21 @@ Route::get('/kontak', function () {
 })->middleware(['auth', 'verified'])->name('kontak');
 
 require __DIR__.'/auth.php';
+
+Route::get('/aju', function () {
+    return view('pengajuan');
+})->name('pengajuan');
+
+Route::get('/ambil', function () {
+    return view('pengambilan');
+})->name('pengambilan');
+
+
+
+
+
+
+
+
+
+
