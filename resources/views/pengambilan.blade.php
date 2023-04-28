@@ -32,7 +32,7 @@
     <div class="hidden fixed top-0 left-0 bottom-0 right-0 bg-green-500 bg-opacity-50 flex justify-center items-center" id="popup">
     <div class="bg-[#ADDE86] rounded-lg p-6" border-solid>
     <div class="flex items-center justify-center">
-      <img class="h-[150px] w-auto mb-4" src="{{url('/image/Vector.png')}}" alt="image" />
+      <img class="h-[150px] w-auto mb-4" src="{{url('/images/Vector.png')}}" alt="image" />
     </div>
      <h1 class=" flex items-center justify-center text-2xl font-bold mb-1">Terima Kasih</h1>
     <p class="text-xl mb-4">Pengambilan Sampah telah terkonfirmasi</p>
