@@ -15,19 +15,19 @@
             <div class="px-10 py-8">
               <table border="0" class="font-semibold" style="font-size: 30px;">
                 <tr>
-                  <td class="px-2"><img class="h-5 w-5" src="mail.png"/></td>
+                  <td class="px-2"><img class="h-5 w-5" src="{{url('/images/mail.png')}}"/></td>
                   <td>Email</td>
                   <td class="px-3">:</td>
                   <td>banksampah@gmail.com</td>
                 </tr>
                 <tr>
-                  <td class="px-2"><img class="h-5 w-5" src="arroba.png"/></td>
+                  <td class="px-2"><img class="h-5 w-5" src="{{url('/images/arroba.png')}}"/></td>
                   <td>Media Sosial</td>
                   <td class="px-3">:</td>
                   <td>@banksampah</td>
                 </tr>
                 <tr>
-                  <td class="px-2"><img class="h-5 w-5" src="call.png"/></td>
+                  <td class="px-2"><img class="h-5 w-5" src="{{url('/images/call.png')}}"/></td>
                   <td>Telepon</td>
                   <td class="px-3">:</td>
                   <td>(0651) 123 123</td>
