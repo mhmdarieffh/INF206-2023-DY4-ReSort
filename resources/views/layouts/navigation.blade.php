@@ -14,15 +14,15 @@
             <div class="hidden sm:flex sm:items-center sm:ml-6">
             <!-- Beranda -->
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('beranda')">
-                    {{ __('Beranda') }}
+                <x-nav-link :href="route('beranda')" :active="request()->routeIs('beranda')">
+                    {{ __('beranda') }}
                 </x-nav-link>
             </div>
 
             <!-- Kontak -->
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('kontak')">
-                    {{ __('Kontak') }}
+                <x-nav-link :href="route('kontak')" :active="request()->routeIs('kontak')">
+                    {{ __('kontak') }}
                 </x-nav-link>
             </div>
 
