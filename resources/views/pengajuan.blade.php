@@ -62,7 +62,7 @@
     </div>
      <h1 class=" flex items-center justify-center text-2xl font-bold mb-1">Terima Kasih</h1>
     <p class="text-xl mb-4">Mohon tunggu petugas menjemput sampah anda</p>
-    <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closePopup()">Tutup</button>
+    <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="redirectToBeranda()">kembali</button>
 
     
     </div>
@@ -77,8 +77,8 @@
         document.getElementById("popup").classList.remove("hidden");
       }
 
-      function closePopup() {
-        document.getElementById("popup").classList.add("hidden");
+      function redirectToBeranda() {
+        window.location.href = "{{ route('beranda') }}";
       }
 
     </script>
