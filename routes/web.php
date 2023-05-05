@@ -35,9 +35,11 @@ Route::get('/kontak', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/pengajuan', function () {
-    return view('pengajuan');
-})->middleware(['auth', 'verified'])->name('pengajuan');
+ Route::get('/pengajuan', function () {
+     return view('pengajuan');
+ })->middleware(['auth', 'verified'])->name('pengajuan');
+
+Route::resource('/pengajuans', \App\Http\Controllers\PengajuanController::class);
 
 Route::get('/pengambilan', function () {
     return view('pengambilan');
