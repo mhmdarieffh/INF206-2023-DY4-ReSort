@@ -1,49 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/ambil.css" />
-    <title>pengambilan</title>
-  </head>
-  <body>
+<x-app-layout>
+<div class="bg-[#ADDE86] p-8">
     <div class="bg-[#D9D9D9] rounded-[20px]"> 
       <div class="bg-[#E6E6E6]  rounded-[20px]">
         <div class="mx-auto px-4">
-          <div class="flex justify-between h-16">
-            <!-- Logo -->
-            <div class="flex items-center justify-center">
-              <img class="h-8 w-auto" src="{{url('/image/logo.png')}}" alt="Logo" />
-            </div>
-
-            <!-- Menu -->
-            <div class="flex justify-between items-center text-[20px] p-[20px]">
-              <!-- Beranda -->
-              <a
-                href="#"
-                class="px-3 py-2 text-gray-800 hover:text-white font-semibold"
-                >Beranda</a
-              >
-
-              <!-- Kontak -->
-              <a
-                href="#"
-                class="px-3 py-2 text-gray-800 hover:text-white font-semibold"
-                >Kontak</a
-              >
-
-              <!-- Logout -->
-              <a
-                href="#"
-                class="px-3 py-2 text-gray-800 hover:text-white font-semibold"
-                >Logout</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="p-[30px]">
         <div
           class="flex items-center justify-center bg-[#E6E6E6] rounded-[20px] h-screen"
@@ -73,7 +32,7 @@
     <div class="hidden fixed top-0 left-0 bottom-0 right-0 bg-green-500 bg-opacity-50 flex justify-center items-center" id="popup">
     <div class="bg-[#ADDE86] rounded-lg p-6" border-solid>
     <div class="flex items-center justify-center">
-      <img class="h-[150px] w-auto mb-4" src="{{url('/image/Vector.png')}}" alt="image" />
+      <img class="h-[150px] w-auto mb-4" src="{{url('/images/Vector.png')}}" alt="image" />
     </div>
      <h1 class=" flex items-center justify-center text-2xl font-bold mb-1">Terima Kasih</h1>
     <p class="text-xl mb-4">Pengambilan Sampah telah terkonfirmasi</p>
@@ -93,7 +52,11 @@
       function closePopup() {
         document.getElementById("popup").classList.add("hidden");
       }
-    </script>
-  </body>
-</html>
+      </script>
+  </div>
+  </div>
+          </div>
+        </div>
+      </div>
+</x-app-layout>
 
