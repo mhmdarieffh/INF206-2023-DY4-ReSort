@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,8 @@ Route::middleware('auth')->group(function () {
     
 });
 
-require _DIR_.'/auth.php';
+require __DIR__.'/auth.php';
+
 
 Route::get('/pengajuan', function () {
     return view('warga/pengajuan');
