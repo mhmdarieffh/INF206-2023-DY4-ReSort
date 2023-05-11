@@ -27,7 +27,7 @@
                         </div>
                    </div>  
                    <div>
-                       <a href="/petugas/tabel" >
+                       <a href="/petugas/data" >
                        <span class="material-symbols-outlined" style="display: flex; justify-content:center; font-size:180px; color:black; margin-left:;">bar_chart</span>
                        </a>
                        <h2 class="text-[#000000] text-center " style="font-size: 24px">
