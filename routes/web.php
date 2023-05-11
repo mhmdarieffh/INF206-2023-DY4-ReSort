@@ -1,7 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TabelController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PengajuanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get ('/home', [HomeController::class,"index"]);
+Route::resource('warga/pengajuan', \App\Http\Controllers\PengajuanController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -29,26 +31,25 @@ Route::middleware('auth')->group(function () {
     
 });
 
-Route::get('/kontak', function () {
-    return view('kontak');
-})->middleware(['auth', 'verified'])->name('kontak');
-
 require __DIR__.'/auth.php';
 
- Route::get('/pengajuan', function () {
-     return view('pengajuan');
- })->middleware(['auth', 'verified'])->name('pengajuan');
 
-Route::resource('/pengajuans', \App\Http\Controllers\PengajuanController::class);
+Route::get('/warga/pengajuan', function () {
+    return view('warga/pengajuan');
+})->middleware(['auth', 'verified'])->name('pengajuan');
 
 Route::get('/pengambilan', function () {
     return view('pengambilan');
 })->middleware(['auth', 'verified'])->name('pengambilan');
 
 Route::get('/kontak', function () {
-    return view('kontak');
+    return view('warga/kontak');
 })->middleware(['auth', 'verified'])->name('kontak');
 
 Route::get('/beranda', function () {
-    return view('beranda');
+    return view('warga/beranda');
 })->middleware(['auth', 'verified'])->name('beranda');
+
+Route::resource('/pengajuan', \App\Http\Controllers\PengajuanController::class);
+
+Route::resource('/tabel', \App\Http\Controllers\TabelController::class);
