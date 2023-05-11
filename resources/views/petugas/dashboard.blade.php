@@ -23,10 +23,7 @@
                         </div>
                         <div>
                             <h2 class="text-[#000000] text-center " style="font-size: 24px">
-                                Lihat Form Pengambilan
-                                <br>
-                                Sampah
-                            </h2>
+                                Lihat Tabel Pengajuan Sampah</h2>
                         </div>
                    </div>  
                    <div>
@@ -37,7 +34,6 @@
                            Data Sampah
                        </h2>
                    </div>  
-    
                 </div>
                 <div>
                 </div>

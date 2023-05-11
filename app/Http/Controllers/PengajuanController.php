@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Pengajuan;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use App\Notifications\PengajuanSampahNotification;
+use Illuminate\Support\Facades\Notification;
+use App\Models\Pickup;
+use App\Models\User;
+
 
 class PengajuanController extends Controller
 {
@@ -37,6 +42,11 @@ class PengajuanController extends Controller
             'organik' => $request->organik,
             'anorganik' => $request->anorganik,
         ]);
+        
+        $petugas = User::where('role', 'petugas')->get(); // Ganti dengan query yang sesuai untuk mendapatkan daftar petugas
+        foreach ($petugas as $petugas) {
+            $petugas->notify(new PengajuanSampahNotification($request->nama));
+        }
     
         return redirect()->route('ajuSuccess')
             ->with('success', 'Pengajuan created successfully.');
