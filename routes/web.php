@@ -57,3 +57,7 @@ Route::get('/beranda', function () {
 Route::resource('/pengajuan', \App\Http\Controllers\PengajuanController::class);
 
 Route::resource('/petugas/tabel', \App\Http\Controllers\TabelController::class);
+
+Route::get('/warga/ajuSuccess', function () {
+    return view('warga/ajuSuccess');
+})->middleware(['auth', 'verified'])->name('ajuSuccess');
