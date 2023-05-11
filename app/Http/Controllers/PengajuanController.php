@@ -45,7 +45,7 @@ class PengajuanController extends Controller
         
         $petugas = User::where('role', 'petugas')->get(); // Ganti dengan query yang sesuai untuk mendapatkan daftar petugas
         foreach ($petugas as $petugas) {
-            $petugas->notify(new PengajuanSampahNotification());
+            $petugas->notify(new PengajuanSampahNotification($request->nama));
         }
     
         return redirect()->route('ajuSuccess')

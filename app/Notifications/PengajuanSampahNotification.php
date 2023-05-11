@@ -12,9 +12,9 @@ class PengajuanSampahNotification extends Notification
 {
     use Queueable;
 
-    public function __construct()
+    public function __construct($nama)
     {
-        //
+        $this->nama = $nama;
     }
 
     public function via($notifiable)
@@ -27,7 +27,7 @@ class PengajuanSampahNotification extends Notification
         $user = $notifiable; // Assuming the notifiable is the user object
     
         return [
-            'message' => 'warga mengajukan pengambilan sampah',
+            'message' => $this->nama . ' Mengajukan pengambilan sampah',
         ];
     }
 
