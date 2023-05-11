@@ -22,14 +22,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($pengajuan as $p)
                                     <tr>
-                                        <td class="text-center" scope="row">1</th>
-                                        <td class="text-center">Putri Ulfayani</td>
-                                        <td class="text-center">Peureulak, Aceh Timur</td>
-                                        <td class="text-center">2 kg</td>
-                                        <td class="text-center">3 kg</td>
-                                        <td class="text-center">Selesai</td>
+                                        <td class="text-center" scope="row">{{ $loop->iteration }}</th>
+                                        <td class="text-center">{{ $p->nama }}</td>
+                                        <td class="text-center">{{ $p->alamat }}</td>
+                                        <td class="text-center">{{ $p->organik }} Kg</td>
+                                        <td class="text-center">{{ $p->anorganik }} Kg</td>
+                                        <td class="text-center"><select id="status" name="status text-center" required>
+                                            <option selected>Belum Selesai</option>
+                                             <option>Selesai</option>
+                                             </select></td>
                                     </tr>
+                                    @endforeach
+                                    
                                 </tbody>
                             </table>
                         </div>

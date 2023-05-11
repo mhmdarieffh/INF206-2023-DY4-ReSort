@@ -38,8 +38,8 @@ Route::get('/warga/pengajuan', function () {
     return view('warga/pengajuan');
 })->middleware(['auth', 'verified'])->name('pengajuan');
 
-Route::get('/pengambilan', function () {
-    return view('pengambilan');
+Route::get('/petugas/pengambilan', function () {
+    return view('petugas/pengambilan');
 })->middleware(['auth', 'verified'])->name('pengambilan');
 
 Route::get('/kontak', function () {
@@ -50,10 +50,10 @@ Route::get('/beranda', function () {
     return view('warga/beranda');
 })->middleware(['auth', 'verified'])->name('beranda');
 
-Route::get('/rekap', function () {
-    return view('petugas/rekap');
-})->middleware(['auth', 'verified'])->name('rekap');
+// Route::get('/rekap', function () {
+//     return view('petugas/rekap');
+// })->middleware(['auth', 'verified'])->name('rekap');
 
 Route::resource('/pengajuan', \App\Http\Controllers\PengajuanController::class);
 
-Route::resource('/tabel', \App\Http\Controllers\TabelController::class);
+Route::resource('/petugas/tabel', \App\Http\Controllers\TabelController::class);
