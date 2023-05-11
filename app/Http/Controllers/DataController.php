@@ -14,6 +14,7 @@ class DataController extends Controller
         $data = DB::table('pengajuan')
                         ->select(DB::raw('SUM(organik) as total_organik'), DB::raw('SUM(anorganik) as total_anorganik'), 'tanggal')
                         ->groupBy('tanggal')
+                        ->orderBy('tanggal', 'DESC')
                         ->paginate(10);
 
 

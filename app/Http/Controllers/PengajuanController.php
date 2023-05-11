@@ -17,7 +17,7 @@ class PengajuanController extends Controller
 {
     public function index(): View
     {
-        $pengajuan = Pengajuan::latest()->paginate(5);
+        $pengajuan = Pengajuan::latest()->paginate(10);
 
         return view('pickup.index', compact('pickups'));
 
@@ -56,3 +56,4 @@ class PengajuanController extends Controller
     
 
     }
+}
