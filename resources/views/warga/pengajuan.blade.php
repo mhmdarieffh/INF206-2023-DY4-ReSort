@@ -10,7 +10,7 @@
                                 <h1 class="relative flex justify-center text-[25px] font-bold p-[10px]">
                                     FORM PENGAJUAN SAMPAH
                                 </h1>
-                                <form action="{{ route('pengajuans.store') }}" method="POST"
+                                <form action="{{ route('pengajuan.store') }}" method="POST"
                                     enctype="multipart/form-data" class="font-bold text-[20px] mt-[18px]">
                                     @csrf
                                     <div>

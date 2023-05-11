@@ -1,8 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TabelController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PengajuanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +22,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 Route::get ('/home', [HomeController::class,"index"]);
+Route::resource('warga/pengajuan', \App\Http\Controllers\PengajuanController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -27,9 +31,10 @@ Route::middleware('auth')->group(function () {
     
 });
 
-require _DIR_.'/auth.php';
+require __DIR__.'/auth.php';
 
-Route::get('/pengajuan', function () {
+
+Route::get('/warga/pengajuan', function () {
     return view('warga/pengajuan');
 })->middleware(['auth', 'verified'])->name('pengajuan');
 
@@ -44,3 +49,7 @@ Route::get('/kontak', function () {
 Route::get('/beranda', function () {
     return view('warga/beranda');
 })->middleware(['auth', 'verified'])->name('beranda');
+
+Route::resource('/pengajuan', \App\Http\Controllers\PengajuanController::class);
+
+Route::resource('/tabel', \App\Http\Controllers\TabelController::class);
