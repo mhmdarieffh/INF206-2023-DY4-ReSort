@@ -38,7 +38,7 @@
                                     </div>
                                     <div>
                                         <button type="submit"
-                                            class="btn btn-md btn-primary relative left-[350px] relative top-[80px] w-[150px] h-[40px] bg-[#E6E6E6] rounded-[20px] flex items-center justify-center text-[20px] font-semibold">Kirim</button>
+                                            class="btn btn-md btn-primary relative left-[350px] relative top-[80px] w-[150px] h-[40px] bg-[#E6E6E6] rounded-[20px] flex items-center justify-center text-[20px] font-semibold text-[#244454] ">Kirim</button>
                                     </div>
                                 </form>
 
