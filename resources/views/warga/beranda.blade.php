@@ -17,7 +17,7 @@
             <div style="display: flex; justify-content: center;">
 
                 
-                <a href="pengajuan" >
+                <a href="/warga/pengajuan" >
                     <i class="material-icons" style="font-size:240px; color:black; margin-left:;">recycling</i>
                 </a>
 
