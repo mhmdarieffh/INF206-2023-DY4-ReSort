@@ -6,6 +6,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TabelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PengajuanController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\IndexController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +68,6 @@ Route::get('/warga/ajuSuccess', function () {
 Route::get('/petugas/dashboard', function () {
     return view('petugas/dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::get('/index', [IndexController::class, 'index'])->name('dashboard');

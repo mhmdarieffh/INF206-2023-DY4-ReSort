@@ -13,12 +13,12 @@ class HomeController extends Controller
     {
         $role=Auth::user()->role;
 
-        if($role=='1') 
+        if($role=='petugas') 
         {
             return view ('petugas/dashboard');
         }
 
-        else
+        else if ($role=='warga')
         {
             return view ('warga/beranda');
         }
