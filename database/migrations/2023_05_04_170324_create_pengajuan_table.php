@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->float('organik');
             $table->float('anorganik');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }
