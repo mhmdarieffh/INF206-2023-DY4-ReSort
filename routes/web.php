@@ -70,4 +70,4 @@ Route::get('/petugas/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('/index', [IndexController::class, 'index'])->name('dashboard');
+Route::get('/index', [IndexController::class, 'index'])->name('index');
