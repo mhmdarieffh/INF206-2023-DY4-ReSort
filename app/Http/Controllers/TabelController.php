@@ -13,3 +13,5 @@ class TabelController extends Controller
         return view('petugas.tabel', compact(['pengajuan']));
     }
 }
+
+

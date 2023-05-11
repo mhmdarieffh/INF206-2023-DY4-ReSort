@@ -9,6 +9,10 @@ class Pengajuan extends Model
 {
     use HasFactory;
     protected $table = 'pengajuan';
+    protected $dates = ['tanggal'];
+
+    
+
     /**
      * fillable
      *
@@ -19,5 +23,6 @@ class Pengajuan extends Model
         'alamat',
         'organik',
         'anorganik',
+        'tanggal'
     ];
 }
