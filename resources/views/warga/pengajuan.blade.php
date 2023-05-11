@@ -38,29 +38,12 @@
                                     </div>
                                     <div>
                                         <button type="submit"
-                                            class="btn btn-md btn-primary relative left-[350px] relative top-[80px] w-[150px] h-[40px] bg-[#E6E6E6] rounded-[20px] flex items-center justify-center text-[20px] font-semibold"
-                                            onclick="showPopup()">Kirim</button>
+                                            class="btn btn-md btn-primary relative left-[350px] relative top-[80px] w-[150px] h-[40px] bg-[#E6E6E6] rounded-[20px] flex items-center justify-center text-[20px] font-semibold">Kirim</button>
                                     </div>
                                 </form>
 
                             </div>
-                            <div class="hidden fixed top-0 left-0 bottom-0 right-0 bg-green-500 bg-opacity-50 flex justify-center items-center"
-                                id="popup">
-                                <div class="bg-[#ADDE86] rounded-lg p-6" border-solid>
-                                    <div class="flex items-center justify-center">
-                                        <img class="h-[150px] w-auto mb-4" src="{{url('/images/Vector.png')}}"
-                                            alt="image" />
-                                    </div>
-                                    <h1 class=" flex items-center justify-center text-2xl font-bold mb-1">Terima Kasih
-                                    </h1>
-                                    <p class="text-xl mb-4">Mohon tunggu petugas menjemput sampah anda</p>
-                                    <button
-                                        class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                        onclick="redirectToBeranda()">kembali</button>
 
-
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -74,13 +57,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
     <script>
-        function showPopup() {
-            document.getElementById("popup").classList.remove("hidden");
-        }
-
-        function redirectToBeranda() {
-            window.location.href = "{{ route('beranda') }}";
-        }
         CKEDITOR.replace('content');
 
     </script>
