@@ -19,7 +19,7 @@
                                     onclick="redirectToBeranda()">Kembali</button>
                                 <script>
                                     function redirectToBeranda() {
-                                        window.location.href = "{{ route('petugas/dashboard') }}";
+                                        window.location.href = "{{ route('beranda') }}";
                                     }
 
                                 </script>
