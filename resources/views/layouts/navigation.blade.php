@@ -15,7 +15,7 @@
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Beranda -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    @if(auth()->user()->role == 1)
+                    @if(auth()->user()->role == 'petugas')
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Beranda') }}
                     </x-nav-link>
