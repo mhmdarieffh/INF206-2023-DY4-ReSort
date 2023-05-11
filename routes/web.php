@@ -61,3 +61,7 @@ Route::resource('/petugas/tabel', \App\Http\Controllers\TabelController::class);
 Route::get('/warga/ajuSuccess', function () {
     return view('warga/ajuSuccess');
 })->middleware(['auth', 'verified'])->name('ajuSuccess');
+
+Route::get('/petugas/dashboard', function () {
+    return view('petugas/dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
