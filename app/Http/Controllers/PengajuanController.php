@@ -38,7 +38,7 @@ class PengajuanController extends Controller
             'anorganik' => $request->anorganik,
         ]);
     
-        return redirect()->route('beranda')
+        return redirect()->route('ajuSuccess')
             ->with('success', 'Pengajuan created successfully.');
     }
 }
