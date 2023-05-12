@@ -2,18 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Pickup;
 use App\Models\Pengajuan;
 use Illuminate\View\View;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\PengajuanSampahNotification;
+
 
 class PengajuanController extends Controller
 {
     public function index(): View
     {
-        $pengajuans = Pengajuan::latest()->paginate(5);
+        $pengajuan = Pengajuan::latest()->paginate(10);
 
         return view('pickup.index', compact('pickups'));
+
     }
 
     public function create(): View
@@ -36,9 +43,17 @@ class PengajuanController extends Controller
             'alamat' => $request->alamat,
             'organik' => $request->organik,
             'anorganik' => $request->anorganik,
+            'tanggal' => date('Y-m-d'),
         ]);
-    
-        return redirect()->route('beranda')
+        
+        $petugas = User::where('role', 'petugas')->get(); // Ganti dengan query yang sesuai untuk mendapatkan daftar petugas
+        foreach ($petugas as $petugas) {
+            $petugas->notify(new PengajuanSampahNotification($request->nama));
+
+        return redirect()->route('ajuSuccess')
             ->with('success', 'Pengajuan created successfully.');
+        }
+    
+
     }
 }

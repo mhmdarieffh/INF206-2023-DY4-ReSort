@@ -6,6 +6,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TabelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PengajuanController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\IndexController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +41,8 @@ Route::get('/warga/pengajuan', function () {
     return view('warga/pengajuan');
 })->middleware(['auth', 'verified'])->name('pengajuan');
 
-Route::get('/pengambilan', function () {
-    return view('pengambilan');
+Route::get('/petugas/pengambilan', function () {
+    return view('petugas/pengambilan');
 })->middleware(['auth', 'verified'])->name('pengambilan');
 
 Route::get('/kontak', function () {
@@ -50,10 +53,23 @@ Route::get('/beranda', function () {
     return view('warga/beranda');
 })->middleware(['auth', 'verified'])->name('beranda');
 
-Route::get('/rekap', function () {
-    return view('petugas/rekap');
-})->middleware(['auth', 'verified'])->name('rekap');
+// Route::get('/rekap', function () {
+//     return view('petugas/rekap');
+// })->middleware(['auth', 'verified'])->name('rekap');
 
 Route::resource('/pengajuan', \App\Http\Controllers\PengajuanController::class);
 
-Route::resource('/tabel', \App\Http\Controllers\TabelController::class);
+Route::resource('/petugas/tabel', \App\Http\Controllers\TabelController::class);
+
+Route::resource('/petugas/data', \App\Http\Controllers\DataController::class);
+
+Route::get('/warga/ajuSuccess', function () {
+    return view('warga/ajuSuccess');
+})->middleware(['auth', 'verified'])->name('ajuSuccess');
+
+Route::get('/petugas/dashboard', function () {
+    return view('petugas/dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::get('/index', [IndexController::class, 'index'])->name('index');

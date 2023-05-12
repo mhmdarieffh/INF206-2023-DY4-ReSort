@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pengajuan', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->text('alamat');
-            $table->float('organik');
-            $table->float('anorganik');
-            $table->date('tanggal');
+        Schema::create('notifications', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('type');
+            $table->morphs('notifiable');
+            $table->text('data');
+            $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengajuan');
+        Schema::dropIfExists('notifications');
     }
 };
