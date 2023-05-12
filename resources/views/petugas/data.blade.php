@@ -28,9 +28,9 @@
                                                     <tbody>
                                                         @foreach ($data as $d)
                                                         <tr>
-                                                            <td> {{ $d->tanggal }}</td>
-                                                            <td class="text-center">{{ $d->total_organik }} KG</td>
-                                                            <td class="text-center">{{ $d->total_anorganik }} KG</td>
+                                                            <td class="text-center"> {{ $d->tanggal }}</td>
+                                                            <td class="text-center">{{ $d->total_organik }} Kg</td>
+                                                            <td class="text-center">{{ $d->total_anorganik }} Kg</td>
                                                         </tr>
                                                         @endforeach
                                                         
