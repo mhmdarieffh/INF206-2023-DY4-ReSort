@@ -11,7 +11,8 @@
                     </a>
                 </div>
             </div>
-
+            
+            
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Beranda -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -26,12 +27,30 @@
                     @endif
                 </div>
 
+                <div class="hidden space-x-6 sm:-my-px sm:ml-10 sm:flex">
+                    @if(auth()->user()->role == 'petugas')
+                    <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
+                        {{ __('Notifikasi') }}
+                    </x-nav-link>
+                    @endif
+                </div>
+
                 <!-- Kontak -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('kontak')" :active="request()->routeIs('kontak')">
                         {{ __('kontak') }}
                     </x-nav-link>
                 </div>
+
+                @if(auth()->user()->role == 'petugas')
+                <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+                    <div class="pt-2 pb-3 space-y-1">
+                        <x-responsive-nav-link :href="route('index')" :active="request()->routeIs('index')">
+                            {{ __('notifications') }}
+                        </x-responsive-nav-link>
+                    </div>
+                </div>
+                @endif
 
                 <!-- Settings Dropdown -->
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
