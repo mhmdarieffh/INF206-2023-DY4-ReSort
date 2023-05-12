@@ -1,3 +1,5 @@
+<x-app-layout>
+
 <!-- Isi halaman dashboard petugas -->
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -23,8 +25,9 @@
                                 Notifikasi
                             </h1 class="ml-8">
                             @foreach (Auth::user()->unreadNotifications as $notification)
-                            <div class="ml-8">{{ $notification->data['message'] }}</div>
-                            @endforeach
+    <div class="ml-8" style="border: 1px solid black; padding: 10px; margin-bottom: 10px;">{{ $notification->data['message'] }}</div>
+@endforeach
+
                         </div>
                     </div>
                 </div>
@@ -32,3 +35,5 @@
         </div>
     </div>
 </div>
+
+</x-app-layout>
